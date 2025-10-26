@@ -4,7 +4,9 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
 import ringNebula from '../assets/images/SouthernRingNebula.png' 
 import GoogleMapsHome from '../assets/images/GoogleMaps-home.svg' 
 import crudBackground from '../assets/images/crudBackground.svg'
+import clientBackground from '../assets/images/spinningwheelbuilding.jpg'
 import mockupBackground from '../assets/images/mockupBackground.svg'
+import dinerBackground from '../assets/images/dinermockupBackground.svg'
 import constructionBackground from '../assets/images/constructionBackground.svg'
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -19,6 +21,10 @@ const HomePage = () => {
   const GMAPShandleButtonClick = () => {
     navigate('/scrollsection');
   };
+  const clienthandleButtonClick = () => {
+    navigate('/client');
+  };
+  
 
   const testnav = () => {
     navigate('/mobile');
@@ -135,6 +141,17 @@ const HomePage = () => {
               <button className={styles['homePage-button']} onClick={GMAPShandleButtonClick}> 
                 Read More
               </button>
+            </div>
+          </li>
+
+          <li className={styles['homePage-item']} style={{ backgroundImage: `url(${dinerBackground})` }}>
+            <div className={styles['homePage-content']}>
+              <h2 className={styles['homePage-title']}>Client Projects</h2>
+              <p className={styles['homePage-description']}>
+                A collection of several modern websites created for businesses, combining functionality with polished design.
+                <span><hr style={{ width: '220px', marginTop: '10px', opacity: 0.5 }}/> <div style={{ marginTop: '8px', fontSize: 12, opacity: 0.5 }}>July, 2023</div></span>
+              </p>
+                <button className={styles['homePage-button']}  onClick={clienthandleButtonClick}>Read More</button>
             </div>
           </li>
 
