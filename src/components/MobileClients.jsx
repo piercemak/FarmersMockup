@@ -104,7 +104,7 @@ export default function MobileClients() {
               window.open(LINKS[index], "_blank", "noopener,noreferrer")
             }
           >
-            Open Site <span className={styles["arrow-icon"]}>↗</span>
+            Open Site
           </button>
 
           <button
