@@ -149,7 +149,7 @@ const HomePage = () => {
               <h2 className={styles['homePage-title']}>Client Projects</h2>
               <p className={styles['homePage-description']}>
                 A collection of several modern websites created for businesses, combining functionality with polished design.
-                <span><hr style={{ width: '220px', marginTop: '10px', opacity: 0.5 }}/> <div style={{ marginTop: '8px', fontSize: 12, opacity: 0.5 }}>July, 2023</div></span>
+                <span><hr style={{ width: '220px', marginTop: '10px', opacity: 0.5 }}/> <div style={{ marginTop: '8px', fontSize: 12, opacity: 0.5 }}>August, 2025</div></span>
               </p>
                 <button className={styles['homePage-button']}  onClick={clienthandleButtonClick}>Read More</button>
             </div>

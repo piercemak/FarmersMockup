@@ -77,6 +77,11 @@
   text-wrap: nowrap;  
 }
 
+
+.nav-item:hover {
+    color: grey !important;
+}
+
 .nav-index {
   position: absolute;
   left: 2rem;
