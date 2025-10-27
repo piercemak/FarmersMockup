@@ -20,7 +20,8 @@ import DistanceDelete from './components/DistanceDelete';
 import LocationDelete from './components/LocationDelete';
 import Map from './components/Map';
 import ScrollableSection from './components/ScrollableSection';
-import MobileWarning from './components/MobileWarning'
+import MobileWarning from './components/MobileWarning';
+import MobileClients from './components/MobileClients';
 import Clients from './components/Clients';
 import { isMobile } from 'react-device-detect';
 
@@ -43,6 +44,7 @@ function App() {
             />
             <Route path="/mobile" element={<HomePageMobile />} />
             <Route path="/mobilewarning" element={<MobileWarning />} />
+            <Route path="/mobileclients" element={<MobileClients />} />
             <Route path="/client" element={<Clients />} />
 
             {/* Google-specific routes with GoogleNavBar */}

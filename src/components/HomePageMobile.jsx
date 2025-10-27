@@ -4,6 +4,7 @@ import ringNebula from '../assets/images/SouthernRingNebula.svg'
 import googleElement from '../assets/images/GoogleElement.svg' 
 import crudBackground from '../assets/images/BlueMockupMobile.svg'
 import mockupBackground from '../assets/images/OrangeMockupMobile.svg'
+import dinerBackground from '../assets/images/DinerMockupMobile.svg'
 import pmElement from '../assets/images/PMElement.svg'
 import constructionElement from '../assets/images/ConstructionElement.svg'
 import { Link, useNavigate } from 'react-router-dom';
@@ -21,6 +22,10 @@ const HomePageMobile = () => {
     
       const MobileHomeNav = () => {
         navigate('/mobile');
+      };
+
+      const MobileClientsNav = () => {
+        navigate('/mobileclients');
       };
 
     /* Slider swiping and clicking functionality */
@@ -154,6 +159,22 @@ const HomePageMobile = () => {
               </div>
             </div>
           </li>
+
+          <li className={styles['homePage-item']} style={{ backgroundImage: `url(${dinerBackground})` }}>
+            <div className={styles['homePage-content']}>
+              <span className={styles['homePage-title']}>Client Projects</span>
+              <p className={styles['homePage-description']}>
+                A collection of several modern websites created for businesses, combining functionality with polished design.
+                <span className={styles['homePage-creation']}>
+                    <hr style={{ width: '220px', marginTop: '10px', opacity: 0.5 }}/> 
+                    <div style={{ marginTop: '8px', fontSize: 12, opacity: 0.5 }}>August, 2025</div>
+                </span>
+              </p>
+              <div className={styles['homePage-button']}>
+                  <span className={styles['homePage-buttontext']} onClick={MobileClientsNav}> Check it Out </span>
+              </div>
+            </div>
+          </li> 
                 
           
         </ul>

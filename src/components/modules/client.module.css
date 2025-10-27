@@ -206,3 +206,92 @@
   background: rgba(0, 0, 0, 0.25); /* adjust opacity as needed */
   z-index: 1;
 }
+
+
+
+
+
+
+
+
+
+/* ===== MOBILE REFINEMENTS ===== */
+@media (max-width: 768px) {
+  .mobile-client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .mobile-inner {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .mobile-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .mobile-subtext {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.85);
+    text-transform: uppercase;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+  }
+
+  /* progress bars row */
+  .mobile-bars {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 6px;
+    width: min(84%, 360px);
+    margin-top: 2px;
+  }
+
+  .mobile-bar {
+    position: relative;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.22);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .mobile-bar__fill {
+    position: absolute;
+    inset: 0;
+    transform-origin: left center;
+    transform: scaleX(0);
+    background: rgba(255,255,255,0.95);
+  }
+
+  .mobile-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  /* make buttons comfy on very small screens */
+  @media (max-width: 390px) {
+    .mobile-buttons { width: 100%; }
+    .mobile-buttons .hero-btn { flex: 1; padding: 0.6rem 0.9rem; }
+  }
+
+  /* slightly stronger overlay on small screens for readability */
+  .bg-overlay { background: rgba(0,0,0,0.32); }
+}
