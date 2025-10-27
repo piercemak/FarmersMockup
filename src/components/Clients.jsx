@@ -77,7 +77,7 @@ export default function Clients() {
         {/* center buttons */}
         <div className={styles["center-content"]}>
           <h1 className={styles["hero-title"]}>
-            Client-Comissioned Projects 
+            Client-Commissioned Projects 
           </h1>
           <p className={styles["hero-subtext"]}>
             Full stack business applications built with React, Node.js, Tailwind CSS, and more.
