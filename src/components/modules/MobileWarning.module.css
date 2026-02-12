@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..1000;1,100..1000&display=swap');
+
+.mobile-background {
+    background-color: #fff;
+    background: url('../../assets/images/WarningBackground.svg') no-repeat center center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100dvh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.signature-container {
+    width: 120px;
+    height: 120px;
+}
+
+.signature-logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.laptop-container {
+    margin-top: -210px;
+    position: absolute;
+    width: 450px;
+    height: 450px;
+}
+
+.laptop-logo {
+    position: absolute;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-textcontainer1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-textbody1 {
+    font-weight: 900;
+    font-size: 45px;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 190px;
+}
+
+.mobile-textcontainer2 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.mobile-textbody2 {
+    font-family: 'DM Sans', sans-serif;
+    color: #6b7280;
+}
+
+.mobile-button:active {
+    transform: scale(0.95); 
+    background: #ffa268; 
+}
+
+.mobile-button:active .mobile-buttontext {
+    color: white; 
+}
+
+.mobile-button {
+    width: 220px;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #4ddaff, #ff3131, #ff914d);
+    transition: transform 0.2s ease;
+}
+
+.mobile-buttontext {
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    color: #050304;
+    font-family: 'DM Sans', sans-serif;
+    transition: color 0.2s ease;
+}

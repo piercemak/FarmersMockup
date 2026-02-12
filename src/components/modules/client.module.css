@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.client-outer {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  background: #0b1012;            /* fallback */
+  color: #e7f0f3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* --- LAYERS --- */
+.bg {
+  position: absolute;
+  inset: 0;
+  background: url("/images/your-photo.jpg") left center / cover no-repeat;
+  filter: saturate(1.05) contrast(1.05) brightness(0.98);
+}
+
+/* Gentle dark vignette so type reads everywhere */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 100% at 50% 50%,
+      transparent 60%, rgba(0,0,0,0.22) 100%),
+    linear-gradient(to bottom, transparent 70%, rgba(0,0,0,0.18));
+}
+
+/* Film grain */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .08;
+  background-size: 240px 240px;
+  mix-blend-mode: overlay;
+}
+
+/* Content wrapper so you can place UI over the image */
+.client-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+/* --- BOTTOM NAV --- */
+.client-bottom-nav {
+  display: grid;
+  grid-auto-flow: column;
+  margin-bottom: 30px;
+  align-items: end;
+  gap: 4rem;
+  padding: 0 2.5rem 2rem;
+  color: rgba(231,240,243,0.9);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* label with hairline before/after like the screenshot */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  position: relative;
+  text-wrap: nowrap;  
+}
+
+
+.nav-item:hover {
+    color: grey !important;
+}
+
+.nav-index {
+  position: absolute;
+  left: 2rem;
+  top: 20rem;
+  font-size: 14px;
+  letter-spacing: .18em;
+  opacity: .8;
+}
+
+/* container for the line */
+.nav-line {
+  position: relative;
+  width: 170px;            /* line length */
+  height: 2px;
+  background: rgba(255,255,255,.18); /* faint track */
+  overflow: hidden;
+}
+
+/* the progress fill (we’ll animate scaleX) */
+.nav-line__fill {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.9);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+
+
+/* Center controls container */
+/* row you already added */
+.client-center-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  z-index: 10;
+}
+
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-wrap: nowrap;
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: rgba(255,255,255,0.5); /* faded highlight */
+}
+
+.hero-subtext {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.button-row {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Buttons */
+.hero-btn {
+  border: none;
+  border-radius: 9999px;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.85rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  justify-items: center;
+}
+
+.arrow-icon {
+  font-size: 12px;
+  margin-left: 6px;
+  line-height: 0;
+  transform: translateX(0);
+  transition: transform .2s ease, opacity .2s ease;
+  opacity: .9;
+}
+
+.hero-btn--dark {
+  background: black;
+  color: white;
+}
+
+.hero-btn--dark:hover {
+  background: #222;
+  transform: translateY(-1px);
+}
+
+.hero-btn--light {
+  background: white;
+  color: black;
+}
+
+.hero-btn--light:hover {
+  background: #eaeaea;
+  transform: translateY(-1px);
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* adjust opacity as needed */
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+/* ===== MOBILE REFINEMENTS ===== */
+@media (max-width: 768px) {
+  .mobile-client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .mobile-inner {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .mobile-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .mobile-subtext {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.85);
+    text-transform: uppercase;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+  }
+
+  /* progress bars row */
+  .mobile-bars {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 6px;
+    width: min(84%, 360px);
+    margin-top: 2px;
+  }
+
+  .mobile-bar {
+    position: relative;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.22);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .mobile-bar__fill {
+    position: absolute;
+    inset: 0;
+    transform-origin: left center;
+    transform: scaleX(0);
+    background: rgba(255,255,255,0.95);
+  }
+
+  .mobile-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 2.5rem;
+  }
+
+  /* make buttons comfy on very small screens */
+  @media (max-width: 390px) {
+    .mobile-buttons { width: 100%; }
+    .mobile-buttons .hero-btn { flex: 1; padding: 0.6rem 0.9rem; }
+  }
+
+  /* slightly stronger overlay on small screens for readability */
+  .bg-overlay { background: rgba(0,0,0,0.32); }
+}
