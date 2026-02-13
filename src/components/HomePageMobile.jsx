@@ -86,21 +86,21 @@ const HomePageMobile = () => {
             </div>
           </li> 
 
-          <li className={styles['homePage-item']} style={{ backgroundImage: `url(${ringNebula})` }}>
+          <li className={styles['homePage-item']} style={{ backgroundImage: `url(${dinerBackground})` }}>
             <div className={styles['homePage-content']}>
-              <span className={styles['homePage-title']}>Astrolarity</span>
+              <span className={styles['homePage-title']}>Client Projects</span>
               <p className={styles['homePage-description']}>
-                A comprehensive database featuring detailed profiles of astronomical objects, interactive calculator, and more.
+                A collection of several modern websites created for businesses, combining functionality with polished design.
                 <span className={styles['homePage-creation']}>
                     <hr style={{ width: '220px', marginTop: '10px', opacity: 0.5 }}/> 
-                    <div style={{ marginTop: '8px', fontSize: 12, opacity: 0.5 }}>July, 2023</div>
+                    <div style={{ marginTop: '8px', fontSize: 12, opacity: 0.5 }}>August, 2025</div>
                 </span>
               </p>
-                <a className={styles['homePage-button']} href="https://www.astrolarity.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration:'none'}}>
-                  <span className={styles['homePage-buttontext']}> Check it Out </span>
-                </a>
+              <div className={styles['homePage-button']}>
+                  <span className={styles['homePage-buttontext']} onClick={MobileClientsNav}> Check it Out </span>
+              </div>
             </div>
-          </li>
+          </li> 
 
           <li className={styles['homePage-item']} style={{ backgroundImage: `url(${crudBackground})` }}>
             <div className={styles['Element_container']}>
@@ -159,22 +159,6 @@ const HomePageMobile = () => {
               </div>
             </div>
           </li>
-
-          <li className={styles['homePage-item']} style={{ backgroundImage: `url(${dinerBackground})` }}>
-            <div className={styles['homePage-content']}>
-              <span className={styles['homePage-title']}>Client Projects</span>
-              <p className={styles['homePage-description']}>
-                A collection of several modern websites created for businesses, combining functionality with polished design.
-                <span className={styles['homePage-creation']}>
-                    <hr style={{ width: '220px', marginTop: '10px', opacity: 0.5 }}/> 
-                    <div style={{ marginTop: '8px', fontSize: 12, opacity: 0.5 }}>August, 2025</div>
-                </span>
-              </p>
-              <div className={styles['homePage-button']}>
-                  <span className={styles['homePage-buttontext']} onClick={MobileClientsNav}> Check it Out </span>
-              </div>
-            </div>
-          </li> 
                 
           
         </ul>
